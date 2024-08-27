@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-public class number_print {
+public class numberic_to_words {
 
 	public void length(long num) {
 		long count=0;
@@ -346,7 +346,7 @@ public class number_print {
 	}
 	
 	public static void main(String[] args) {
-		number_print obj = new number_print();
+		numberic_to_words obj = new numberic_to_words();
 		System.out.println("Enter the number");
 		try (Scanner a = new Scanner(System.in)) {
 			long num = a.nextLong();
