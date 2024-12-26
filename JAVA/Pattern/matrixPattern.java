@@ -1,6 +1,6 @@
 package practice;
 
-/*To print the matrix in the form of spiral for the given input. For example if the number of rows and coloumn is 3 then the output should be
+/*To print the matrix in the form of spiral for the given input. For example if the number of rows and column is 3 then the output should be
 01 02 03 
 08 09 04 
 07 06 05 
