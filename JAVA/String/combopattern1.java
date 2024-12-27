@@ -63,26 +63,21 @@ public class combopattern1 {
 	}
 
 	public ArrayList<String> backtrack(String[] s, int start, ArrayList<String> result) {
-		if (start == s.length) {
-			return result;
-		}
-		else {
-			for (int i = start; i < s.length; i++) {
-				swap(s, start, i);
-				
-				if(!result.contains(String.join("", s))) {
-					result.add(String.join("", s));
-				}
-				
-			}
-			
-			
-			return backtrack(s, start + 1, result);
-		}
+        if (start == s.length) {
+        	result.add(String.join("", s));
+            return result;
+        }
 
+        for (int i = start; i < s.length; i++) {
+            swap(s, start, i);
+            backtrack(s, start + 1, result);
+            swap(s, start, i); // Backtrack
+        }
+        
+        return result;
 	}
 
-	private void swap(String[] s, int i, int j) {
+	public void swap(String[] s, int i, int j) {
 		String temp = s[i];
 		s[i] = s[j];
 		s[j] = temp;
