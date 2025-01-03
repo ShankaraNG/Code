@@ -10,5 +10,3 @@ def search(a):
 
 
 search("hankara\gmail?com")
-
-from abc import abstractmethod
