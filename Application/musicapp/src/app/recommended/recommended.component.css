@@ -1,0 +1,42 @@
+.container{
+  align-items: center;
+    display: grid;
+    grid-row-gap:50px;
+    grid-column-gap: 50px;
+    background-color: whitesmoke;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    
+}
+
+.panel-heading{
+    background-color: rgb(1, 1, 85);
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    box-shadow: 5px 10px 18px rgb(1, 1, 85);
+    height: auto;
+    width: auto;
+}
+.panel-body{
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(1, 1, 85);
+  background-color: white;
+  float: center;
+  box-shadow: 5px 10px 18px rgb(1, 1, 85);
+}
+.button{
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 10px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 9px black;
+}
+
+

@@ -1,0 +1,55 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+ .hello{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    background-image: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_506068552_298876.jpg");
+ }
+  
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+.input{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+
+  .container {
+    border-radius: 2px;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: right;
+    width: 75%;
+    margin-top: 6px;
+    margin-left: 20;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

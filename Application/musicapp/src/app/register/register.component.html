@@ -1,0 +1,97 @@
+<body class="hello">
+<div class="container">
+    <form #saveForm="ngForm" (ngSubmit)="saveUser(saveForm)">
+        <h3 style="text-align: center;">Sign-Up</h3>
+    <div class="row">
+      <div class="col-25">
+        <label for="userid">User-Id</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="userid" [(ngModel)]="user.userId" placeholder="UserId" required>
+      </div>
+       
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="userName">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="firstname" [(ngModel)]="user.firstname" placeholder="firstname" required >
+      </div>
+      <div class="col-75">
+        <input type="text" name="secondname" [(ngModel)]="user.secondname" placeholder="secondname" required >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="emailId" [(ngModel)]="user.emailId" placeholder="name@example.com" required>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="Password">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="password" [(ngModel)]="user.password" placeholder="password" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="confirmPassword">Confirm Password</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="confirmPassword" [(ngModel)]="user.confirmPassword" placeholder="confirmPassword" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="profilepic">Select a file</label>
+        </div>
+        <div class="col-75">
+          <!-- <input type="file" name="profilepic" [(ngModel)]="user.profilepic" placeholder="profilepicrequired"> -->
+               <img [src]="myimg" width="100px">
+               <input type="file" (change)="onFileSelected($event)">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="secret question">Please select a secret question</label>
+        </div>
+        <div class="col-75">
+          <select 
+           id="secret_question">
+          
+           <option value="0">Select one</option> 
+           <option value="1">What is your favourite Food?</option> 
+           <option value="2">Name of town where you were born?</option> 
+           <option value="3">Name of your first pet?</option> 
+           <option value="4">What is the name of your first school?</option>
+           <option value="5">What is your nickname?</option>
+          </select> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="answer">Answer the question</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="answer" [(ngModel)]="user.answer" placeholder="answer" required>
+        </div>
+      </div>
+      <br>
+    <div class="row">
+      <input type="submit" value="register">
+    </div>
+    <br>
+    <div class="col-30">
+      <a >already a user ?</a>
+     </div>
+   <div class="col-70">
+     <input routerLink="/login" type="submit" value="login">
+   </div>
+    </form>
+  </div>
+</body>

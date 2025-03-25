@@ -1,0 +1,42 @@
+<body class="yo">
+<div class="container">
+<form #saveForm="ngForm" (ngSubmit)="saveUser(saveForm)">
+    <div class="row">
+        <div class="col-25">
+          <label for="emailId">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="emailId" [(ngModel)]="emailId" placeholder="name@email.com">
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="password">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="password" [(ngModel)]="password"  placeholder="password">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <input type="submit" value="Login">
+      </div>
+      <br>
+      <div class="row">
+          <input type="checkbox" checked = "checked">Remember me
+        </div>
+        <br>
+        <div class="row">
+           <a routerLink="/forgotpassword">Forgot password ? click here</a>
+          </div>
+          <br>
+          <div class="col-45">
+             <a >Not a user ?</a>
+            </div>
+          <div class="col-70">
+            <input routerLink="/register" type="submit" value="register">
+          </div>
+
+    </form>
+    </div>
+</body>
